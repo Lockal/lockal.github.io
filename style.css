@@ -1,13 +1,18 @@
-* {
+*{
     padding: 0;
     margin: 0;
+    color: #263245;
 }
-
 
 @font-face {
     font-family: Bebas Neue Cyrillic;
     src: url(fonts/Bebas_Neue_Cyrillic.ttf);
     src: url(fonts/bebas_neue_cyrillic-webfont.woff);
+}
+
+@font-face {
+    font-family: Bebas Neue Regular;
+    src: url(fonts/bebasneue_regular-webfont.woff);
 }
 
 .header {
@@ -94,16 +99,21 @@
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    color: white;
     font-family: "Bebas Neue Cyrillic", sans-serif;
     font-size: 24px;
     padding-right: 114px;
     padding-top: 22px;
     line-height: 1;
+    color: white;
+}
+
+.title__date-text {
+    color: white;
 }
 
 
 .title__date-sml {
+    color: white;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     border-bottom: 1px solid;
@@ -113,7 +123,7 @@
 }
 
 .title__main {
-    margin-top: 222px;
+    margin-top: 220px;
     margin-left: 202px;
 }
 
@@ -159,7 +169,7 @@
     width: 274px;
     height: 64px;
     background-color: #3171f2;
-    margin-top: 40px;
+    margin-top: 42px;
     margin-bottom: 188px;
     letter-spacing: 0.3px;
 }
@@ -186,8 +196,8 @@
     display: flex;
     flex-direction: column;
     width: 500px;
-    line-height: 1.1;
-    margin-bottom: 2px;
+    line-height: 1.05;
+    margin-bottom: 7px;
 }
 
 .content-blocks__title--sml {
@@ -225,7 +235,7 @@
     height: 282px;
     font-family: "Bebas Neue Cyrillic", sans-serif;
     padding-left: 24px;
-    padding-top: 28px;
+    padding-top: 26px;
     padding-right: 55px;
     padding-bottom: 11px;
     box-sizing: border-box;
@@ -237,16 +247,14 @@
     font-size: 32px;
     line-height: 1;
     color: #3171f2;
-    height: 60px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
+    padding-bottom: 14px;
 }
 
 .content-blocks__text--content {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     color: #8b9499;
-    margin-top: 18px;
-
     line-height: 1.5;
 }
 
@@ -261,6 +269,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 123px;
 }
 
 .content-info__title {
@@ -285,7 +294,7 @@
 .content-info__element-title {
     border-top: 1px solid #e6e8ed;
     padding-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     font-family: "Bebas Neue Cyrillic", sans-serif;
     font-size: 32px;
 }
@@ -294,7 +303,7 @@
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     color: #8b9499;
-    margin-bottom: 51px;
+    margin-bottom: 53px;
     width: 102%;
     line-height: 1.64;
 }
@@ -347,4 +356,210 @@
     position: absolute;
     left: 40px;
     top: 25px;
+}
+
+.format {
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f5fa;
+    box-sizing: border-box;
+}
+
+.format__title {
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-size: 48px;
+    padding-top: 89px;
+    padding-left: 100px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.format__blocks {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 100px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-bottom: 53px;
+}
+
+.format__blocks-element {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 412px;
+    height: 156px;
+    padding-right: 10px;
+    white-space: pre;
+}
+
+.format__blocks-element--big {
+    font-size: 32px;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    color: #3171f2;
+}
+
+.format__blocks-element--sml {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #8b9499;
+    padding-top: 10px;
+    line-height: 1.5;
+}
+
+.bio {
+    display: flex;
+}
+
+.bio__title {
+    display: flex;
+    flex-direction: column;
+}
+
+.bio__title-text {
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-size: 48px;
+    margin-top: 102px;
+    margin-left: 100px;
+    letter-spacing: 0.5px;
+}
+
+.bio__title-img {
+    margin-top: 20px;
+    margin-left: 99px;
+}
+
+.bio__info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 173px;
+    margin-left: 37px;
+}
+
+.bio__info-descript {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #3171f2;
+}
+
+.bio__info-name {
+    box-sizing: border-box;
+    padding-top: 4px;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-size: 48px;
+    letter-spacing: 0.4px;
+}
+
+.bio__info-content {
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #8b9499;
+    line-height: 2.2;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.bio__info-content--text {
+    position: relative;
+    white-space: nowrap;
+}
+
+.bio__info-content--text::before {
+    content: "";
+    position: absolute;
+    background-color: #3171f2;
+    height: 2px;
+    width: 12px;
+    top: 12px;
+    left: -30px;
+}
+
+.bio__info-title {
+    padding-top: 36px;
+    letter-spacing: 0.2px;
+    font-size: 32px;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+}
+
+.bio__info-main {
+    width: 685px;
+    padding-top: 7px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #263245;
+    line-height: 1.64;
+    display: flex;
+    flex-direction: column;
+}
+
+.bio__info-main--text {
+    box-sizing: border-box;
+    padding-bottom: 9px;
+}
+
+.bio__info-end {
+    padding-top: 30px;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    color: #3171f2;
+    font-size: 24px;
+}
+
+.bio__info-foot {
+    width: 700px;
+    padding-top: 9px;
+    display: flex;
+    font-size: 32px;
+    font-family: "Bebas Neue Regular";
+    font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: 0px;
+    margin-right: 28px;
+}
+
+.bio__info-foot--element {
+    margin-right: 6px;
+}
+
+.bio__info-foot--element:nth-child(2) {
+    padding-left: 22px;
+}
+
+.garant {
+    box-sizing: border-box;
+    margin-top: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 236px;
+    background: rgba(117,160,245,1);
+    background: -moz-radial-gradient(center, circle cover, rgba(117,160,245,1) 0%, rgba(117,160,245,1) 27%, rgba(97,141,224,1) 27%, rgba(72,128,232,1) 44%, rgba(74,124,224,1) 44%, rgba(65,127,242,1) 61%, rgba(61,119,235,1) 61%, rgba(61,119,235,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(117,160,245,1)), color-stop(27%, rgba(117,160,245,1)), color-stop(27%, rgba(97,141,224,1)), color-stop(44%, rgba(72,128,232,1)), color-stop(44%, rgba(74,124,224,1)), color-stop(61%, rgba(65,127,242,1)), color-stop(61%, rgba(61,119,235,1)), color-stop(100%, rgba(61,119,235,1)));
+    background: -webkit-radial-gradient(center, circle cover, rgba(117,160,245,1) 0%, rgba(117,160,245,1) 27%, rgba(97,141,224,1) 27%, rgba(72,128,232,1) 44%, rgba(74,124,224,1) 44%, rgba(65,127,242,1) 61%, rgba(61,119,235,1) 61%, rgba(61,119,235,1) 100%);
+    background: -o-radial-gradient(center, circle cover, rgba(117,160,245,1) 0%, rgba(117,160,245,1) 27%, rgba(97,141,224,1) 27%, rgba(72,128,232,1) 44%, rgba(74,124,224,1) 44%, rgba(65,127,242,1) 61%, rgba(61,119,235,1) 61%, rgba(61,119,235,1) 100%);
+    background: -ms-radial-gradient(center, circle cover, rgba(117,160,245,1) 0%, rgba(117,160,245,1) 27%, rgba(97,141,224,1) 27%, rgba(72,128,232,1) 44%, rgba(74,124,224,1) 44%, rgba(65,127,242,1) 61%, rgba(61,119,235,1) 61%, rgba(61,119,235,1) 100%);
+    background: radial-gradient(circle at center, rgba(117,160,245,1) 0%, rgba(117,160,245,1) 27%, rgba(97,141,224,1) 27%, rgba(72,128,232,1) 44%, rgba(74,124,224,1) 44%, rgba(65,127,242,1) 61%, rgba(61,119,235,1) 61%, rgba(61,119,235,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75a0f5', endColorstr='#3d77eb', GradientType=1 );
+}
+
+.garant-title {
+    color: white;
+    padding-top: 67px;
+    box-sizing: border-box;
+    font-size: 32px;
+    font-family: "Bebas Neue Cyrillic", sans-serif;    
+}
+
+.garant-text {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    width: 689px;
+    line-height: 1.64;
+    padding-top: 18px;
+    text-align: center;
 }
