@@ -1,0 +1,350 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+@font-face {
+    font-family: Bebas Neue Cyrillic;
+    src: url(fonts/Bebas_Neue_Cyrillic.ttf);
+    src: url(fonts/bebas_neue_cyrillic-webfont.woff);
+}
+
+.header {
+    display: flex;
+    box-sizing: border-box;
+    align-items:center;
+}
+
+.header__logo img {
+    height: 20px;
+    width: 182px;
+}
+
+.header__logo {
+    padding-top: 6px;
+    padding-left: 86px;
+}
+
+.header__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+    letter-spacing: 0.2px;
+    margin-right: 100px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    height: 52px;
+    width: 170px;
+    background: #3171f2;
+    color: white;
+    cursor: pointer;
+    margin-left: 17px;
+}
+
+.header__btn:hover {
+    background: #537dd2;
+    cursor: pointer;
+}
+
+.header__btn:active {
+    background: #7d96c7;
+    cursor: pointer;
+}
+
+
+.header__menu {
+    margin-right: 28px;
+    margin-left: auto;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    display: flex;
+    list-style-type: none;
+}
+
+.header__menu-element {
+    padding-left: 35px;
+}
+
+.header__menu-element--link {
+    color: black;
+    text-decoration: none;
+}
+
+.header__menu-element--link:hover {
+    color: #000000bd;
+}
+
+.header__menu-element--link:active {
+    color: #000000bd;
+    text-decoration: underline;
+}
+
+.title {
+    background: url("img/bg.png") no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+}
+
+.title__date {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    color: white;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-size: 24px;
+    padding-right: 114px;
+    padding-top: 22px;
+    line-height: 1;
+}
+
+
+.title__date-sml {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    border-bottom: 1px solid;
+    width: 73px;
+    padding-top: 7px;
+    cursor: pointer;
+}
+
+.title__main {
+    margin-top: 222px;
+    margin-left: 202px;
+}
+
+.title__main-text {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-size: 24px;
+    color: white;
+    white-space: pre;
+}
+
+.title__main-text:first-child {
+    margin-bottom: 7px;
+    line-height: 0.96;
+}
+
+.title__main-text:nth-child(2) {
+    font-size: 96px;
+    margin-bottom: 26px;
+    letter-spacing: 0.8px;
+}
+
+.title__main-text:nth-child(4) {
+    margin-bottom: 10px;
+}
+
+.title__main-text:nth-child(5) {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.title__main-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-size: 20px;
+    color: white;
+    width: 274px;
+    height: 64px;
+    background-color: #3171f2;
+    margin-top: 40px;
+    margin-bottom: 188px;
+    letter-spacing: 0.3px;
+}
+
+.title__main-btn:hover {
+    background: #537dd2;
+    cursor: pointer;
+}
+
+.title__main-btn:active {
+    background: #7d96c7;
+    cursor: pointer;
+}
+
+.content-blocks {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-blocks__title {
+    margin-top: 97px;
+    letter-spacing: 0.5px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    line-height: 1.1;
+    margin-bottom: 2px;
+}
+
+.content-blocks__title--sml {
+    font-family: "Roboto";
+    color: #3171f2;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding-bottom: 9px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.content-blocks__title--big {
+    text-transform: uppercase;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-size: 48px;
+}
+
+.content-blocks__title--blue {
+    color: #3171f2;
+}
+
+.content-blocks__main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-top: 31px;
+}
+
+.content-blocks__main-block {
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f5fa;
+    width: 376px;
+    height: 282px;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    padding-left: 24px;
+    padding-top: 28px;
+    padding-right: 55px;
+    padding-bottom: 11px;
+    box-sizing: border-box;
+    margin-right: 36px;
+    margin-bottom: 36px;
+}
+
+.content-blocks__text--title {
+    font-size: 32px;
+    line-height: 1;
+    color: #3171f2;
+    height: 60px;
+    letter-spacing: 0.3px;
+}
+
+.content-blocks__text--content {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #8b9499;
+    margin-top: 18px;
+
+    line-height: 1.5;
+}
+
+.content-blocks__text--number {
+    font-size: 48px;
+    color: #8b9499;
+    margin-top: auto;
+    opacity: 0.2;
+}
+
+.content-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.content-info__title {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 108px;
+    font-size: 48px;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    margin-bottom: 42px;
+}
+
+.content-info__element {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 557px;
+    padding-left: 192px;
+    position: relative;
+}
+
+.content-info__element-title {
+    border-top: 1px solid #e6e8ed;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-size: 32px;
+}
+
+.content-info__element-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #8b9499;
+    margin-bottom: 51px;
+    width: 102%;
+    line-height: 1.64;
+}
+
+.content-info__element:nth-child(2)::before {
+    background: url("img/list.png") no-repeat;
+    height: 77px;
+    width: 75px;
+    content: "";
+    position: absolute;
+    left: 53px;
+    top: 25px;
+}
+
+.content-info__element:nth-child(3)::before {
+    background: url("img/mail.png") no-repeat;
+    height: 77px;
+    width: 78px;
+    content: "";
+    position: absolute;
+    left: 42px;
+    top: 25px;
+}
+
+.content-info__element:nth-child(4)::before {
+    background: url("img/dialog.png") no-repeat;
+    height: 77px;
+    width: 78px;
+    content: "";
+    position: absolute;
+    left: 36px;
+    top: 26px;
+}
+
+.content-info__element:nth-child(5)::before {
+    background: url("img/cup.png") no-repeat;
+    height: 77px;
+    width: 78px;
+    content: "";
+    position: absolute;
+    left: 50px;
+    top: 25px;
+}
+
+.content-info__element:nth-child(6)::before {
+    background: url("img/ks.png") no-repeat;
+    height: 77px;
+    width: 78px;
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: 25px;
+}
