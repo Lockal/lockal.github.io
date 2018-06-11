@@ -116,10 +116,11 @@
     color: white;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
     width: 73px;
     padding-top: 7px;
     cursor: pointer;
+    padding-bottom: 2px;
 }
 
 .title__main {
@@ -715,9 +716,10 @@
     }
 
     .title {
-    background: url("img/bg-m.png") no-repeat;
-    background-size: cover;
-    flex-direction: column;
+        background: url("img/bg-m.png") no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        height: auto;
     }
 
     .title__main-btn {
