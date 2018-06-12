@@ -190,13 +190,14 @@
     flex-direction: column;
 }
 
+
 .content-blocks__title {
     margin-top: 97px;
     letter-spacing: 0.5px;
-    margin-left: 100px;
     display: flex;
+    max-width: 500px;
     flex-direction: column;
-    width: 500px;
+    margin-left: 100px;
     line-height: 1.05;
     margin-bottom: 7px;
 }
@@ -1195,6 +1196,7 @@
         padding-right: 25px;
         margin-bottom: 0;
         padding-bottom: 0;
+        overflow: hidden;
     }
 
     .bio__info-end {
@@ -1204,12 +1206,13 @@
 
     .bio__info-foot {
         font-size: 22px;
-        min-width: 300px;
+        width: 40%;
         overflow: hidden;
     }
 
     .bio__info-foot--element {
        padding-top: 5px;
+       width: 130px;
        letter-spacing: 0.4px;
     }
 
