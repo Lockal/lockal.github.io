@@ -833,8 +833,7 @@
 
 
 @media screen and (max-width: 1000px) {
-    html { overflow-x:  hidden;
-    }
+    
 
     .header {
         display: flex;
@@ -1205,14 +1204,13 @@
 
     .bio__info-foot {
         font-size: 22px;
-        width: 500px;
-        overflow: hidden; 
+        min-width: 300px;
+        overflow: hidden;
     }
 
     .bio__info-foot--element {
        padding-top: 5px;
        letter-spacing: 0.4px;
-       overflow: hidden;
     }
 
     .garant {
