@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    width: 1920px;
+}
+
+@font-face  { 
+    font-family: 'Pollock';
+    src: url('./fonts/Pollock.woff2') format('woff2'), url('./fonts/Pollock.woff') format('woff');
+}
+
+.header {
+    background: url("img/background.png") no-repeat;
+}
+
+.header__title {
+    display: flex;
+    align-items: center;
+}
+
+.header__title-logo {
+    margin-top: 19px;
+    margin-left: 60px;
+}
+
+.header__title-menu {
+    height: 18px;
+    width: 28px;
+    background: url(img/menu2.png) no-repeat,
+                url(img/menu.png) no-repeat 0px 10px;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-bottom: 14px;
+}
+
+.header__title-menu:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.header__content {
+    display: flex;
+    justify-content: center;
+    margin-left: 77px;
+}
+
+.header__content-left {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header__content-right {
+    width: 506px;
+}
+
+.header__content-left-play {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 27px;
+    letter-spacing: 31px;
+    margin-left: auto;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 145px;
+}
+
+.header__content-left-video {
+    margin-left: auto;
+    margin-right: 162px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    letter-spacing: 3.8px;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.header__content-left-number {
+    font-size: 260px;
+    font-weight: bold;
+    font-family: "Cinzel";
+    position: absolute;
+    top: 30px;
+    left: 13px;
+    color: #ffa500;
+}
+
+.header__content-left-rules {
+    font-family: "Pollock", sans-serif;
+    font-size: 92px;
+    margin-top: 128px;
+    margin-left: 27px;
+    text-transform: uppercase;
+    letter-spacing: 24px;
+    color: #064557;
+    position: relative;
+    line-height: 0.7
+}
+
+.header__content-left-reach {
+    margin-top: 2px;
+    font-family: sans-serif;
+    font-family: "Pollock", sans-serif;
+    font-size: 92px;
+    margin-left: 27px;
+    text-transform: uppercase;
+    letter-spacing: 26px;
+    color: white;
+    position: relative;
+}
+
+.orange-text {
+    color: #ffa500;
+}
+
+.white-text {
+    color: white;
+}
+
+.header__content-left-gift {
+    font-family: "Roboto";
+    text-transform: uppercase;
+    letter-spacing: 4.7px;
+    margin-top: 13px;
+    color: #064557;
+    font-size: 24px;
+    margin-left: 27px;
+}
+
+.eight {
+    font-size: 30px;
+    letter-spacing: 8px;
+}
+
+.header__content-left-sucess {
+    font-family: "Roboto";
+    font-weight: 400;
+    color: #064557;
+    font-size: 25px;
+    margin-left: 27px;
+    margin-top: 5px;
+    letter-spacing: -1.6px;
+    position: relative;
+}
+
+.header__content-left-btn {
+    width: 286px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    background: #ffa500;
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-family: "Roboto Condensed";
+    padding-left: 47px;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 7.4px;
+    margin-left: 29px;
+ 
+    margin-bottom: 170px;
+    position: relative;
+}
+
+.header__content-left-scroll {
+    width: 52px;
+    height: 32px;
+    background: url("img/scroll1.png") no-repeat center 3px,
+                url("img/scroll2.png") no-repeat center;
+    position: absolute;
+    top: 833px;
+    left: 588px;
+}
+
+.header__content-left-videolessons {
+    font-size: 70px;
+    font-family: "Pollock";
+    text-transform: uppercase;
+    color: #ffa500;
+    letter-spacing: 7px;
+    margin-left: 300px;
+    margin-top: 141px;
+    position: relative;
+}
+
+.header__content-left-secondnumber {
+    font-size: 92px;
+    margin-top: -86px;
+    margin-left: 28px;
+    letter-spacing: 19px;
+    font-family: "Cinzel";
+    color: white;
+    position: relative;
+}
+
+.header__content-left-text {
+    color: white;
+    font-family: "Pollock";
+    text-transform: uppercase;
+    margin-top: -7px;
+    margin-left: 127px;;
+    font-size: 40px;
+    letter-spacing: 12px;
+}
+
+.header__left-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 157px;
+}
+
+.header__left-menu__block {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 400px;
+    line-height: 1.5;
+    margin-left: 113px;
+    margin-bottom: 171px;
+    height: 162px;
+}
+
+.header__left-menu__block-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 9.9px;
+    color: #ffa500;
+    font-weight: bold;
+    text-align: right;
+}
+
+.header__left-menu__block-content {
+    box-sizing: border-box;
+    margin-top: 3px;
+    padding-right: 11px;
+    letter-spacing: 1.2px;
+    font-family: "Roboto";
+    font-size: 28px;
+    text-transform: uppercase;
+    color: white;
+    text-align: right;
+    line-height: 1.6;
+    font-weight: 100;
+}
+
+.header__left-menu__block-cirle1,
+.header__left-menu__block-cirle2,
+.header__left-menu__block-cirle3 {
+    height: 84px;
+    width: 84px;
+    background: #117f69;
+    border-radius: 50%;
+    position: absolute;
+    right: -142px;
+    top: 24px;
+    z-index: 2;
+}
+
+
+.header__left-menu__block:nth-child(2) {
+    margin-top: 15px;
+    margin-left: -58px;
+}
+
+
+.header__left-menu__block:nth-child(3) {
+    margin-left: 52px;
+    margin-top: 11px;
+    margin-bottom: 40px;
+}
+
+.header__left-menu__block-cirle2 {
+    top: 3px;
+    right: -134px;    
+}
+
+.header__left-menu__block-cirle3 {
+    top: -4px;
+}
+
+.header__left-menu-cirle {
+    position: absolute;
+    width: 964px;
+    height: 932px;
+    background: url("img/bigcircle.png") no-repeat;
+    top: 1262px;
+    left: 429px;
+}
