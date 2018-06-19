@@ -5,7 +5,7 @@
 
 
 html {
-    width: 1920px;
+    min-width: 1920px;
 }
 
 @font-face  { 
@@ -14,7 +14,8 @@ html {
 }
 
 .header {
-    background: url("img/background.png") no-repeat;
+    background: url("img/Background.png") no-repeat;
+    background-size: cover;
 }
 
 .header__title {
@@ -54,10 +55,16 @@ html {
     display: flex;
     flex-direction: column;
     position: relative;
+    z-index: 1;
 }
 
 .header__content-right {
     width: 506px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .header__content-left-play {
@@ -69,6 +76,42 @@ html {
     text-transform: uppercase;
     position: relative;
     margin-top: 145px;
+}
+
+.header__content-left-play::before {
+    content: "";
+    height: 1px;
+    width: 400px;
+    position: absolute;
+    background: white;
+    top: 48px;
+    right: 246px;
+}
+
+.header__content-left-play::after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 52px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    left: 219px;
+    top: 48px;
+}
+
+.header__content-left-playbtn {
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    border: 1px solid white;
+    left: 746px;
+    top: 193px;
+    background: url("img/play.png") no-repeat center;
+}
+
+.header__content-left-playbtn:hover {
+    border-color: #eec400;
+    cursor: pointer;
 }
 
 .header__content-left-video {
@@ -104,7 +147,8 @@ html {
     letter-spacing: 24px;
     color: #064557;
     position: relative;
-    line-height: 0.7
+    line-height: 0.7;
+    z-index: 2;
 }
 
 .header__content-left-reach {
@@ -117,6 +161,7 @@ html {
     letter-spacing: 26px;
     color: white;
     position: relative;
+    z-index: 2;
 }
 
 .orange-text {
@@ -135,6 +180,27 @@ html {
     color: #064557;
     font-size: 24px;
     margin-left: 27px;
+    position: relative;
+}
+
+.header__content-left-gift::before {
+    content: "";
+    position: absolute;
+    width: 973px;
+    height: 153px;
+    background: url("img/rule.png") no-repeat;
+    bottom: 76px;
+    left: -522px;
+}
+
+.header__content-left-gift::after {
+    content: "";
+    position: absolute;
+    width: 1076px;
+    height: 153px;
+    background: url("img/rules2.png") no-repeat;
+    left: -422px;
+    bottom: 76px;
 }
 
 .eight {
@@ -151,6 +217,18 @@ html {
     margin-top: 5px;
     letter-spacing: -1.6px;
     position: relative;
+    z-index: 2;
+}
+
+.header__content-left-sucess::after {
+    content: "";
+    position: absolute;
+    width: 239px;
+    height: 21px;
+    background: url("img/small-line.png");
+    z-index: -1;
+    top: 5px;
+    left: 72px;
 }
 
 .header__content-left-btn {
@@ -162,14 +240,39 @@ html {
     box-sizing: border-box;
     border-radius: 50px;
     font-family: "Roboto Condensed";
-    padding-left: 47px;
+    padding-left: 20px;
     font-size: 23px;
     font-weight: bold;
     letter-spacing: 7.4px;
     margin-left: 29px;
- 
-    margin-bottom: 170px;
+    margin-top: 49px;
+    margin-bottom: 122px;
     position: relative;
+}
+
+.header__content-left-btn::before {
+    position: relative;
+    content: "";
+    width: 27px;
+    height: 1px;
+    background: black;
+    left: 189px;
+    top: 2px;
+}
+
+.header__content-left-btn::after {
+    position: relative;
+    content: "";
+    width: 9px;
+    height: 11px;
+    background: url("img/arrow-main.png");
+    top: 2px;
+    left: 35px;
+}
+
+.header__content-left-btn:hover {
+    background: white;
+    cursor: pointer;
 }
 
 .header__content-left-scroll {
@@ -180,6 +283,12 @@ html {
     position: absolute;
     top: 833px;
     left: 588px;
+}
+
+.header__content-left-scroll:hover {
+    transform: scale(1.1);
+    transition: .3s ease;
+    cursor: pointer;
 }
 
 .header__content-left-videolessons {
@@ -201,6 +310,17 @@ html {
     font-family: "Cinzel";
     color: white;
     position: relative;
+}
+
+.header__content-left-secondnumber::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 660px;
+    background: white;
+    top: 89px;
+    left: 110px;
+
 }
 
 .header__content-left-text {
@@ -267,10 +387,59 @@ html {
     z-index: 2;
 }
 
+.header__left-menu__block-cirle1 {
+    background: url("img/burger.png") no-repeat center,
+              #117f69;
+}
 
 .header__left-menu__block:nth-child(2) {
     margin-top: 15px;
     margin-left: -58px;
+    position: relative;
+    z-index: 0;
+}
+
+.header__left-menu__block:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    width: 447px;
+    height: 558px;
+    background: url("img/menu-lines.png");
+    left: 540px;
+    top: -209px;
+}
+
+.header__left-menu__block:nth-child(1)::after {
+     content: "";
+    position: absolute;
+    width: 159px;
+    height: 159px;
+    background: url("img/circles.png");
+    left: 421px;
+    top: -14px;
+    z-index: 2;
+}
+
+.header__left-menu__block:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    width: 159px;
+    height: 159px;
+    background: url("img/circles.png");
+    left: 414px;
+    top: -34px;
+    z-index: 2;
+}
+
+.header__left-menu__block:nth-child(3)::after {
+     content: "";
+    position: absolute;
+    width: 159px;
+    height: 159px;
+    background: url("img/circles.png");
+    left: 422px;
+    top: -42px;
+    z-index: 2;
 }
 
 
@@ -282,11 +451,15 @@ html {
 
 .header__left-menu__block-cirle2 {
     top: 3px;
-    right: -134px;    
+    right: -134px;
+    background: url("img/car.png") no-repeat center,
+              #117f69;   
 }
 
 .header__left-menu__block-cirle3 {
     top: -4px;
+    background: url("img/baloon.png") no-repeat center,
+              #117f69;
 }
 
 .header__left-menu-cirle {
@@ -296,4 +469,209 @@ html {
     background: url("img/bigcircle.png") no-repeat;
     top: 1262px;
     left: 429px;
+    z-index: -1;
+}
+
+.header__left-menu-basis {
+    position: absolute;
+    width: 70px;
+    height: 250px;
+    background: url("img/basis.png") no-repeat right -190px;
+    top: 1646px;
+    left: 728px;
+    z-index: 2;
+}
+
+.header__left-menu-background {
+    position: absolute;
+    width: 1071px;
+    height: 886px;
+    background: url("img/menu-background.png") no-repeat;
+    top: 1232px;
+}
+
+.header__content-right-social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 786px;
+    align-items: center;
+    font-size: 0;
+    width: 200px;
+    margin-bottom: 507px;
+}
+
+.header__content-right-social-vk {
+    background: url("img/vk.png") no-repeat center;
+    height: 22px;
+    width: 37px;
+}
+
+.header__content-right-social-fb {
+    background: url("img/fb.png") no-repeat center;
+    height: 42px;
+    width: 34px;
+    align-self: center;
+    margin-left: 7px;
+}
+
+.header__content-right-social-tg {
+    background: url("img/tg.png") no-repeat center;
+    height: 30px;
+    width: 37px;
+}
+
+.header__content-right-social-vk:hover {
+    background: url(img/vk-h.png) no-repeat center;
+}
+
+.header__content-right-social-fb:hover {
+    background: url(img/fb-h.png) no-repeat center;
+}
+
+.header__content-right-social-tg:hover {
+    background: url(img/tg-h.png) no-repeat center;
+}
+
+.header__content-right-menu-block {
+    display: flex;
+    flex-direction: column;
+    margin-left: 19px;
+}
+
+.header__content-right-menu-block-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 9.9px;
+    color: #ffa500;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 73px;
+}
+
+.header__content-right-menu-block-content {
+    box-sizing: border-box;
+    margin-top: 1px;
+    padding-right: 11px;
+    letter-spacing: 1.2px;
+    font-family: "Roboto";
+    font-size: 28px;
+    text-transform: uppercase;
+    width: 260px;
+    align-self: center;
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+    font-weight: 100;
+}
+
+.header__content-right-menu-block-circle1 {
+    height: 84px;
+    width: 84px;
+    background: url("img/house.png") center, #117f69;
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 5px;
+}
+
+.header__content-right-menu-block-circle2 {
+    height: 84px;
+    width: 84px;
+    background: url("img/heart.png") center, #117f69;
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 8px;
+}
+
+.header__content-right-menu-btn {
+    width: 286px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    background: #ffa500;
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-family: "Roboto Condensed";
+    padding-left: 16px;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 20px;
+    margin-top: 143px;
+    margin-bottom: 184px;
+    position: relative;
+}
+
+.header__content-right-menu-btn::before {
+    position: relative;
+    content: "";
+    width: 27px;
+    height: 1px;
+    background: black;
+    left: 194px;
+    top: 2px;
+}
+
+.header__content-right-menu-btn::after {
+    position: relative;
+    content: "";
+    width: 9px;
+    height: 11px;
+    background: url("img/arrow-main.png");
+    top: 2px;
+    left: 35px;
+}
+
+.header__content-right-menu-btn:hover {
+    background: white;
+    cursor: pointer;
+}
+
+.header__content-right-menu-block:nth-child(1) {
+    position: relative;
+}
+
+.header__content-right-menu-block:nth-child(3) {
+    margin-bottom: 23px;
+    margin-top: px;
+    position: relative;
+}
+
+.header__content-right-menu-block:nth-child(1)::before {
+    position: absolute;
+    content: "";
+    width: 159px;
+    height: 159px;
+    background: url(img/circles.png) no-repeat;
+    bottom: 113px;
+    left: 70px;
+}
+
+.header__content-right-menu-block:nth-child(3)::before {
+    position: absolute;
+    content: "";
+    width: 159px;
+    height: 159px;
+    background: url(img/circles.png) no-repeat;
+    bottom: 157px;
+    left: 76px;
+}
+
+.header__content-right-menu-block:nth-child(3)::after {
+    position: absolute;
+    content: "";
+    width: 159px;
+    height: 159px;
+    background: url(img/green-ball.png) no-repeat;
+    top: 156px;
+    right: 331px;
+}
+
+.header__content-right-stars {
+    position: absolute;
+    width: 106px;
+    height: 101px;
+    background: url("img/stars.png") no-repeat;
+    top: 1697px;
+    right: 409px;
 }
