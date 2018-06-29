@@ -466,5 +466,10 @@
             <span class="content06__right-up">Наверх</span>
         </div>
     </div>
+    <script>
+        const handleResize = () => document.querySelector('html').style.zoom = window.innerWidth / 19.5 / 100;
+        handleResize();
+        window.addEventListener('resize', handleResize);
+    </script>
 </body>
 </html>
