@@ -3954,44 +3954,44 @@ input:checked + .content04-right-slider:before {
     letter-spacing: -0.1px;
 }
 
-@media (max-width: 1680px) and (min-width: 1680px) {
+@media (max-width: 1680px) {
     html {
         zoom: 0.8664;
     }
     }
     
-    @media (max-width: 1600px) and (min-width: 1600px) {
+    @media (max-width: 1600px) {
     html {
         zoom: 0.8247;
     }
     }
     
-    @media (max-width: 1440px) and (min-width: 1440px) {
+    @media (max-width: 1440px) {
     html {
         zoom: 0.7414;
     }
     }
     
     
-    @media (max-width: 1366px) and (min-width: 1366px) {
+    @media (max-width: 1366px) {
     html {
         zoom: 0.699;
     }
     }
 
-    @media (max-width: 1360px) and (min-width: 1360px) {
+    @media (max-width: 1360px) {
         html {
             zoom: 0.6997;
         }
     }
     
-    @media (max-width: 1280px) and (min-width: 1280px) {
+    @media (max-width: 1280px) {
     html {
         zoom: 0.658;
     }
     }
     
-    @media (max-width: 1024px) and (min-width: 1024px) {
+    @media (max-width: 1024px) {
     html {
         zoom: 0.5247;
     }
