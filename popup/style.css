@@ -49,6 +49,7 @@
     background: url("img/form-bg.png") no-repeat -90px 25px;
     width: 507px;
     margin-left: 4px;
+    position: relative;
 }
 
 .popup__form-inviter {
@@ -324,4 +325,19 @@ input:checked + .popup__form-slider:before {
     letter-spacing: -.2px;
     margin-left: 37px;
     margin-top: 43px;
+}
+
+.popup__close {
+    background: url("img/popup-close.png") no-repeat center;
+    width: 28px;
+    height: 26px;
+    position: absolute;
+    right: -19px;
+    top: 13px;
+}
+
+.popup__close:hover {
+    transform: scale(1.2);
+    transition: .3s ease;
+    cursor: pointer;
 }
