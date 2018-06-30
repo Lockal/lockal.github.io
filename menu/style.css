@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face  { 
+    font-family: 'Pollock';
+    src: url('./fonts/Pollock.woff2') format('woff2'), url('./fonts/Pollock.woff') format('woff');
+}
+
+html {
+    min-width: 1920px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("img/menu-bg.png") no-repeat center;
+    position: relative;
+}
+
+
+.menu__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1297px;
+    margin-top: 294px;
+    margin-bottom: 230px;
+}
+
+.menu__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    min-width: 400px;
+    margin-bottom: 102px;
+}
+
+.menu__number {
+    font-family: "Cinzel", sans-serif;
+    font-size: 35px;
+    border-radius: 50%;
+    width: 87px;
+    height: 87px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.menu__content {
+    font-family: "Roboto", sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-top: 16px;
+}
+
+.menu__block:hover .menu__number {
+    color: white;
+    background: #18836d;
+}
+
+.menu__block:hover .menu__number::before {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 1px;
+    background: black;
+    top: 43px;
+    left: -84px;
+}
+
+.menu__block:hover .menu__number::after {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 1px;
+    background: black;
+    top: 43px;
+    right: -93px;
+}
+
+.menu__close {
+    width: 86px;
+    height: 86px;
+    margin-bottom: auto;
+    margin-left: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("img/menu-close.png") no-repeat center;
+}
+
+.menu__close:hover {
+    filter: invert(0.2);
+    cursor: pointer;
+}
