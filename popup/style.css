@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face  { 
+    font-family: 'Pollock';
+    src: url('./fonts/Pollock.woff2') format('woff2'), url('./fonts/Pollock.woff') format('woff');
+}
+
+.popup {
+    width: 829px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0px 0px 50px 50px;
+    box-shadow: 0px 0px 108px 3px rgba(0, 0, 0, 0.35);
+}
+
+.popup__logo {
+    display: flex;
+    width: 286px;
+    height: 557px;
+    background: #087a63;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 129px 0px rgba(203,223,219,1);
+}
+
+.popup__logo::before {
+    content: "";
+    position: absolute;
+    width: 264px;
+    height: 535px;
+    border: 3px solid #ffaf0a;
+    top: 7px;
+    left: 8px;
+}
+
+.popup__logo-img {
+    margin-top: 126px;
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("img/form-bg.png") no-repeat -90px 25px;
+    width: 507px;
+    margin-left: 4px;
+}
+
+.popup__form-inviter {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    margin-left: 33px;
+    margin-top: 28px;
+    word-spacing: 1.4px;
+}
+
+.popup__form-inviter--gray {
+    text-transform: uppercase;
+    color: #a8a9a9;
+}
+
+.popup__form-field-name,
+.popup__form-field-phone,
+.popup__form-field-email {
+    width: 322px;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #116d5a;
+    margin-bottom: 31px;
+    margin-left: 8px;
+    outline: none;
+    position: relative;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.popup__form-field-phone {
+    margin-bottom: 38px;
+}
+
+.popup__form-field-phone::placeholder {
+    padding-left: 58px;
+}
+
+.popup__form-field-name:hover,
+.popup__form-field-phone:hover,
+.popup__form-field-email:hover {
+    border: none;
+    border-bottom: 3px solid #116d5a;
+}
+
+.popup__form-field-name:focus,
+.popup__form-field-phone:focus,
+.popup__form-field-email:focus {
+    border: none;
+    border-bottom: 3px solid #ffaf0a;
+}
+
+.popup__form-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 62px;
+}
+
+.popup__form-field-icon2 {
+    position: absolute;
+    width: 29px;
+    height: 21px;
+    background: url("img/russia.png");
+    top: 77px;
+    left: 1px;
+}
+
+.popup__form-field-icon3 {
+    position: absolute;
+    width: 29px;
+    height: 21px;
+    background: url("img/e-mail.png") no-repeat;
+    top: 161px;
+    left: 0px;
+}
+
+.popup__form-input__wrap {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #999;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+.popup__form-input-label {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 5px;
+    transition: all .3s ease;
+}
+
+.popup__form-input-label img {
+    width: 20px;
+    margin-right: 3px;
+    transition: all .3s ease;
+}
+
+.popup__form-input-label span {
+    font-size: 16px;
+    transition: all .3s ease;
+}
+
+.popup__form-input__wrap input:focus + .popup__form-input-label {
+    top: -20px;
+    left: 0;
+}
+
+.popup__form-input__wrap input:focus + .popup__form-input-label span {
+    font-size: 14px;
+    color: #000;
+}
+
+.popup__form-input__wrap input:focus + .popup__form-input-label img {
+    width: 15px;
+}
+
+.popup__form-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 16px;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-left: 101px;
+}
+
+.popup__form-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.popup__form-slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 23px;
+    bottom: -1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-box-shadow: 1px 1px 11px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 11px -2px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 11px -2px rgba(0,0,0,0.75);
+}
+
+input:checked + .popup__form-slider {
+    background-color: #116c59;
+}
+
+input:focus + .popup__form-slider {
+    box-shadow: 0 0 1px #8db8af;
+}
+
+input:checked + .popup__form-slider:before {
+    -webkit-transform: translateX(-26px);
+    -ms-transform: translateX(-26px);
+    transform: translateX(-26px);
+}
+
+.popup__form-slider.popup__form-round {
+    border-radius: 34px;
+}
+
+.popup__form-slider.popup__form-round:before {
+    border-radius: 50%;
+}
+
+.popup__form-switch input {
+    display:none;
+}
+
+.popup__form-lower-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    margin-left: 50px;
+    line-height: 1.34;
+    letter-spacing: 0.2px;
+    margin-top: 2px;
+    width: 230px;
+    color: #a3a3a3;
+    font-weight: 300;
+}
+
+.popup__form-upper-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    margin-left: 76px;
+    margin-top: -16px;
+    letter-spacing: 0.2px;
+}
+
+.popup__form-btn {
+    width: 259px;
+    height: 70px;
+    background: #ffa500;
+    border-radius: 50px;
+    margin-top: 26px;
+    margin-left: 22px;
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding-left: 47px;
+    padding-top: 22px;
+    letter-spacing: 4.6px;
+    position: relative;
+}
+
+.popup__form-btn:hover {
+    box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.34);
+    background: white;
+}
+
+.popup__form-btn::before {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 1px;
+    background: black;
+    right: 38px;
+    top: 36px;
+}
+
+.popup__form-btn::after {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 11px;
+    background: url("img/arrow-main.png");
+    top: 31px;
+    right: 34px;
+}
+
+.popup__form-terms {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #686868;
+    font-weight: 300;
+    line-height: 1.5;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 34px;
+    margin-top: 29px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    background: #fafafa;
+    border-radius: 0px 0px 50px 50px;
+}
+
+.popup__form-title {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 21px;
+    letter-spacing: -.2px;
+    margin-left: 37px;
+    margin-top: 43px;
+}
