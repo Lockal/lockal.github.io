@@ -91,6 +91,18 @@ html {
     background-color: #7f4da0;
 }
 
+.register__telegramm:hover {
+    background-color: #2ab4f1;
+}
+
+.register__whatsapp:hover {
+    background-color: #3bdc77;
+}
+
+.register__viber:hover {
+    background-color: #935ab9;
+}
+
 .register__phone {
     text-decoration: none;
     color: #202020;
