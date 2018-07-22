@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 720px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register__logo {
+    padding-left: 134px;
+    padding-right: 135px;
+    padding-top: 48px;
+}
+
+.register__welcome {
+    font-size: 32px;
+    padding-top: 62px;
+    color: #202020;
+}
+
+.register__title {
+    font-size: 26px;
+    color: #91969a;
+    line-height: 39.6px;
+    text-align: center;
+    padding-top: 17px;
+    max-width: 524px;
+}
+
+.btn {
+    display: flex;
+    width: 560px;
+    height: 91px;
+    box-sizing: border-box;
+    margin-top: 16px;
+    border-radius: 92px;
+    position: relative;
+    padding-left: 131px;
+    padding-top: 30px;
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+}
+
+.register__telegramm-icon {
+    background: url("img/telegram.svg") no-repeat center;
+    height: 36px;
+    width: 43px;
+    position: absolute;
+    left: 58px;
+    top: 28px;
+}
+
+.register__whatsapp-icon {
+    background: url("img/whatsapp.svg") no-repeat center;
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    left: 62px;
+    top: 27px;
+}
+
+.register__viber-icon {
+    background: url("img/viber.svg") no-repeat center;
+    height: 41px;
+    width: 41px;
+    position: absolute;
+    left: 60px;
+    top: 29px;
+}
+
+.register__telegramm {
+    margin-top: 138px;
+    background-color: #33abdf;
+}
+
+.register__whatsapp {
+    background-color: #25d366;
+}
+
+.register__viber {
+    background-color: #7f4da0;
+}
+
+.register__phone {
+    text-decoration: none;
+    color: #202020;
+    font-size: 28px;
+    margin-top: 38px;
+    margin-bottom: 48px;
+}
