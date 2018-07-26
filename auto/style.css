@@ -7,6 +7,7 @@ html {
     width: 720px;
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
+    height: 100vh;
 }
 
 .autorisation__title {
@@ -77,6 +78,7 @@ html {
     margin-top: 104px;
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .phone-input__form-country {
@@ -92,7 +94,7 @@ html {
     border: none;
     color: #24b7af;
     border-bottom: 2px solid #c4c4c4;
-    padding-bottom: 1px;
+    background: white;
 }
 
 .phone-input__form-select:focus {
@@ -118,7 +120,7 @@ html {
     width: 112px;
     background: url("img/whitearrow.svg") no-repeat center, #24b7af;
     border-radius: 50%;
-    margin-top: 400px;
+    margin-top: auto;
     margin-left: auto;
     margin-right: 32px;
     margin-bottom: 64px;
