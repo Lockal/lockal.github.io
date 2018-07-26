@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300i,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="dist/inputmask/dependencyLibs/inputmask.dependencyLib.js"></script>
+    <script src="dist/inputmask/inputmask.js"></script>
+    <script src="dist/inputmask/inputmask.extensions.js"></script>
+    <script src="dist/inputmask/inputmask.numeric.extensions.js"></script>
+    <script src="dist/inputmask/inputmask.date.extensions.js"></script>
+    <script src="dist/inputmask/inputmask.phone.extensions.js"></script>
+    <script src="dist/inputmask/phone-codes/phone.js"></script>
+    <script src="dist/inputmask/phone-codes/phone-be.js"></script>
+    <script src="dist/inputmask/phone-codes/phone-ru.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+  <div class="autorisation">
+      <div class="autorisation__arrow"></div>
+      <div class="autorisation__title">Авторизация</div>
+  </div>
+  <div class="description">
+      <div class="description__icon"></div>
+      <span class="description__text">Для авторизации в BeautyLook вы можете
+            использовать ваш номер телефона</span>
+  </div>
+  <div class="phone-title">
+      <span class="phone-title__text">Пожалуйста, укажите ваш номер
+            в международном формате и мы
+            отправим SMS на ваш аккаунт
+            Telegram
+        </span>
+  </div>
+  <div class="phone-input">
+    <form class="phone-input__form">
+        <select class="phone-input__form-select">
+            <option class="phone-input__form-option">+7</option>
+            <option class="phone-input__form-option">+38</option>
+        </select>
+        <input class="phone-input__form-numbers" type="tel">
+    </form>
+  </div>
+  <div class="next-btn"></div>
+</body>
+</html>
