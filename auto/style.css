@@ -7,10 +7,9 @@ html {
     width: 720px;
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
-    height: 100vh;
 }
 
-.autorisation__title {
+.header__title {
     background: url("img/bg.svg") no-repeat 62px 4px;
     background-size: auto;
     min-height: 91px;
@@ -20,12 +19,12 @@ html {
     padding-top: 33px;
 }
 
-.autorisation {
+.header {
     position: relative;
 }
 
 
-.autorisation__arrow {
+.header__arrow {
     position: absolute;
     height: 32px;
     width: 34px;
@@ -34,7 +33,7 @@ html {
     left: 33px;
 }
 
-.autorisation__arrow:hover {
+.header__arrow:hover {
     transform: scale(1.1);
     transition: ease .3s;
     cursor: pointer;
@@ -100,6 +99,7 @@ html {
 .phone-input__form-select:focus {
     border: none;
     outline: none;
+    border-bottom: 2px solid #c4c4c4;
 }
 
 .phone-input__form-numbers {
@@ -113,6 +113,7 @@ html {
 .phone-input__form-numbers:focus {
     border: none;
     outline: none;
+    border-bottom: 2px solid #c4c4c4;
 }
 
 .next-btn {
@@ -129,4 +130,12 @@ html {
 .next-btn:hover {
     background: url("img/whitearrow.svg") no-repeat center, #4fd8d0;
     cursor: pointer;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 864px;
 }
