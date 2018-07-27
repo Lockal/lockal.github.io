@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 720px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+}
+
+.header__title {
+    background: url("img/bg.svg") no-repeat 62px 4px;
+    background-size: auto;
+    min-height: 91px;
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    padding-top: 33px;
+}
+
+.header {
+    position: relative;
+}
+
+.header__search {
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    background: url("img/search.svg") no-repeat;
+    right: 5px;
+    top: 35px;
+    cursor: pointer;
+}
+
+.header__search:hover {
+    transform: scale(1.1);
+    transition: ease .3s;
+    cursor: pointer;
+}
+
+
+.header__arrow {
+    position: absolute;
+    height: 32px;
+    width: 34px;
+    background: url("img/arrow.svg") no-repeat;
+    top: 37px;
+    left: 33px;
+}
+
+.header__arrow:hover {
+    transform: scale(1.1);
+    transition: ease .3s;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.menu {
+    height: 112px;
+    width: 720px;
+    background-color: #24b7af;
+    box-sizing: border-box;
+    margin-top: 32px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-bottom: 12px;
+}
+
+.menu__burger {
+    height: 80px;
+    width: 80px;
+    background: url("img/menu.svg") no-repeat center, rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin-bottom: -5px;
+}
+
+.menu a {
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    opacity: 0.6;
+    position: relative;
+}
+
+.menu__first-element,
+.menu__second-element,
+.menu__third-element {
+    position: relative;
+}
+
+.menu__first-element::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: url("img/list.svg") no-repeat;
+    top: -42px;
+    left: 49px;
+}
+
+.menu__second-element::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: url("img/hearth.svg") no-repeat;
+    filter: contrast();
+    top: -42px;
+    left: 44px;
+}
+
+.menu__third-element::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: url("img/house.png") no-repeat;
+    top: -42px;
+    left: 26px;
+}
+
+.menu__first-element:hover,
+.menu__second-element:hover,
+.menu__third-element:hover {
+    opacity: 1;
+}
+
+.menu a:last-child  {
+    opacity: 1;
+    margin-bottom: 2px;
+}
+
+.menu a:last-child:hover {
+    background: url("img/menu.svg") no-repeat center, rgba(255, 255, 255, 0.4);
+}
+
+.catalog {
+    margin-bottom: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 720px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.catalog__element {
+    position: relative;
+    height: 208px;
+    width: 320px;
+    margin-bottom: 16px;
+}
+
+.catalog__element-text {
+    position: absolute;
+    color: white;
+    bottom: 15px;
+    left: 16px;
+    letter-spacing: -0.2px;
+    font-size: 22px;
+}
