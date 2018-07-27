@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 720px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+}
+
+.header__title {
+    background: url("img/bg.svg") no-repeat 62px 4px;
+    background-size: auto;
+    min-height: 91px;
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    padding-top: 33px;
+}
+
+.header {
+    position: relative;
+}
+
+
+.header__arrow {
+    position: absolute;
+    height: 32px;
+    width: 34px;
+    background: url("img/arrow.svg") no-repeat;
+    top: 37px;
+    left: 33px;
+}
+
+.header__arrow:hover {
+    transform: scale(1.1);
+    transition: ease .3s;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 924px;
+}
+
+.logo {
+    align-self: center;
+    margin-top: 82px;
+}
+
+.sms-title {
+    font-size: 28px;
+    line-height: 42.7px;
+    text-align: center;
+    max-width: 512px;
+    align-self: center;
+    margin-top: 85px;
+}
+
+.sms-number {
+    align-self: center;
+    font-size: 40px;
+    font-weight: 500;
+    color: #24b7af;
+    margin-top: 21px;
+}
+
+.sms-code {
+    margin-top: 73px;
+    width: 384px;
+    height: 106px;
+    align-self: center;
+    font-size: 48px;
+    color: #24b7af;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 30px;
+    border: none;
+    border-bottom: 2px solid #c4c4c4;
+    margin-bottom: 40px;
+}
+
+.sms-code:focus {
+    outline: none;
+    border-bottom: 2px solid #24b7af;
+}
+
+.next-btn {
+    height: 112px;
+    width: 112px;
+    background: url("img/whitearrow.svg") no-repeat center, #24b7af;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 32px;
+    margin-bottom: 64px;
+}
+
+.next-btn:hover {
+    background: url("img/whitearrow.svg") no-repeat center, #4fd8d0;
+    cursor: pointer;
+}
