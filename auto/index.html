@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300i,400,500,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="https://unpkg.com/imask"></script>
-    <script src="main.js"></script>
 </head>
 <body>
 <div class="container">
@@ -34,10 +32,12 @@
             <option class="phone-input__form-option">+7</option>
             <option class="phone-input__form-option">+38</option>
         </select>
-        <input class="phone-input__form-numbers" type="tel">
+        <input class="phone-input__form-numbers" type="tel" id="selector">
     </form>
   </div>
   <div class="next-btn"></div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
