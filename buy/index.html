@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+    <header class="header"></header>
+    <div class="main">
+        <div class="main__first-column">
+            <span class="first-column__title">Детали платежа</span>
+            <span class="first-column__caption">Продавец</span>
+            <span class="first-column__content">Sky Way Invest Group</span>
+            <div class="first-column__underline"></div>
+            <span class="first-column__caption">№ заказа</span>
+            <span class="first-column__content">QQ-9997</span>
+            <div class="first-column__underline"></div>
+            <span class="first-column__caption">Примечание</span>
+            <span class="first-column__content">Обучающая программа ОИП Стабильный</span>
+            <div class="first-column__underline"></div>
+            <span class="first-column__caption">Сумма</span>
+            <span class="first-column__content">0.013530 BTC</span>
+            <div class="first-column__underline"></div>
+            <span class="first-column__warning">Необходимо перевести точно такую сумму как показано иначе возможны возвраты и задержки с обработкой платежа. Сумму нужно перевести одним платежом оплата несколькими платежами не поддерживается</span>
+            <a class="first-column__btn" href="#">Назад</a>
+        </div>
+        <div class="main__second-column">
+            <span class="second-column__title">Оплата</span>
+            <span class="second-column__designation">Переведите точную сумму в <span class="sum">0.013530</span> BTC одной транзакцией на указаный BTC-адрес:</span>
+            <div class="second-column__code copy" id="this">348Hyu83HfapFwi32840Fkdu7fjkj19984jrWIUS2</div>
+            <div class="second-column__copy">Копировать</div>
+            <span class="second-column__warning">Этот BTC-адрес можно использовать только один раз. Каждое новое пополнение нужно инициировать заново</span>
+            <span class="second-column__qr">Так же оплатить можно с помощью QR-кода</span>
+            <div class="second-column__qr-image-container">
+                <img class="second-column__qr-image" src="img/qr.svg" height="174px" width="174px" alt="img">
+            </div>
+            <a class="second-column__btn" href="#">Подтвердить платеж</a>
+            <a class="mobile__btn" href="#"></a>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

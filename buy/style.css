@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: "Roboto", sans-serif;
+    color: #272d3d;
+}
+
+.header {
+    background: #214497;
+    height: 80px;
+}
+
+.main {
+    display: flex;
+}
+
+.main__first-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 202px;
+    padding-right: 114px;
+}
+
+.main__second-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #fafbff;
+    padding-left: 113px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.first-column__title {
+    padding-top: 56px;
+    font-size: 24px;
+    color: #272d3d;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.first-column__title::before {
+    width: 67px;
+    height: 2px;
+    background-color: #214497;
+    content: "";
+    position: absolute;
+    bottom: -14px
+}
+
+.first-column__caption {
+    font-size: 14px;
+    color: #898c98;
+}
+
+.first-column__content {
+    font-size: 18px;
+    color: #272d3d;
+    margin-top: 4px;
+}
+
+.first-column__underline {
+    max-width: 384px;
+    min-width: 100px;
+    height: 1px;
+    opacity: 0.2;
+    background-color: #898c98;
+    margin-top: 14px;
+    margin-bottom: 17px;
+}
+
+.first-column__content:nth-child(12) {
+    color: #214497;
+}
+
+.first-column__warning {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 19.7px;
+    color: #898c98;
+    margin-bottom: 208px;
+    max-width: 419px;
+}
+
+.first-column__btn {
+    margin-top: auto;
+    margin-bottom: 30px;
+    text-decoration: none;
+    width: 152px;
+    height: 48px;
+    border-radius: 4px;
+    border: solid 1px #898c9870;
+    color: #898c98;
+    box-sizing: border-box;
+    padding-left: 56px;
+    padding-top: 16px;
+    font-size: 14px;
+}
+
+.first-column__btn:hover {
+    background-color: #edeff5; 
+}
+
+.first-column__btn:active {
+    background-color: #d5d9e6;
+}
+
+.second-column__title {
+    padding-top: 56px;
+    font-size: 24px;
+    color: #272d3d;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.second-column__title::before {
+    width: 67px;
+    height: 2px;
+    background-color: #214497;
+    content: "";
+    position: absolute;
+    bottom: -14px
+}
+
+.second-column__designation {
+    font-size: 18px;
+    max-width: 408px;
+    color: #272d3d;
+    line-height: 1.41;
+}
+
+.sum {
+    color: #214497;
+}
+
+.second-column__code {
+    color: #214497;
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: 24px;
+}
+
+.second-column__copy {
+    border-bottom: 1px dashed;
+    width: 68px;
+    color: #5d606d;
+    font-size: 12px;
+    padding-top: 7px;
+    padding-bottom: px;
+    cursor: pointer;
+}
+
+.second-column__warning {
+    margin-top: 32px;
+    font-size: 14px;
+    color: #898c98;
+    max-width: 392px;
+    line-height: 19.7px; 
+}
+
+.second-column__qr {
+    margin-top: 88px;
+    font-size: 18px;
+ }
+
+
+.second-column__qr-image-container {
+    background: white;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.second-column__btn {
+    margin-top: auto;
+    margin-bottom: 30px;
+    text-decoration: none;
+    width: 200px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #214497;
+    color: white;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.second-column__btn:hover {
+    background-color: #365bb3;
+}
+
+.second-column__btn:active {
+    background-color: #223c79;
+}
+
+.mobile__btn {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .second-column__code {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .main__first-column {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: auto;
+    }
+
+    .main__second-column {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: auto;
+    }
+
+    .first-column__title {
+        padding-top: 35px;
+        font-size: 20px;
+        margin-bottom: 48px;
+    }
+
+
+    .first-column__content {
+        font-size: 16px;
+        margin-top: 4px;
+    }
+    
+    .first-column__underline {
+        margin-top: 17px;
+        margin-bottom: 17px;
+    }
+
+    .first-column__warning {
+        margin-top: 1px;
+        line-height: 1.41;
+        margin-bottom: 42px;
+    }
+
+    .first-column__btn {
+        display: none;
+    }
+
+    .second-column__title {
+        padding-top: 0px;
+        margin-top: 32px;
+        margin-bottom: 0;
+    }
+
+    .second-column__designation {
+        font-size: 14px;
+        margin-top: 42px;
+    }
+
+    .second-column__code {
+        font-size: 13px;
+        margin-top: 14px;
+    }
+
+    .second-column__copy {
+        width: 110px;
+        height: 38px;
+        border-radius: 4px;
+        background-color: #ebecef;
+        border: none;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        color: #898c98;
+        margin-top: 26px;
+    }
+
+    .second-column__copy:hover {
+        background-color: #c7c7c7a8;
+    }
+
+    .second-column__warning {
+        margin-top: 25px;
+    }
+
+    .second-column__qr,
+    .second-column__qr-image-container,
+    .second-column__qr-image {
+        display: none;
+    }
+
+    .second-column__btn {
+        margin-left: 150px;
+        margin-top: 72px;
+        margin-bottom: 40px;
+    }
+
+    .mobile__btn {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        border-radius: 4px;
+        background: url("img/back-arrow.svg") no-repeat 17px 17px;
+        background-color: #ebecef;
+        bottom: 40px;
+        position: absolute;
+    }
+    
+    .mobile__btn:hover {
+        background-color: #dedede
+    }
+
+    .mobile__btn:active {
+        background-color: #cacaca;
+    }
+
+}
