@@ -335,3 +335,148 @@ html {
         height: calc(100vh - 80px);
     }
 }
+
+.main__success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__success-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__success-icon {
+    height: 100px;
+    width: 100px;
+    background: url("img/ok.svg") no-repeat center #27a91b;
+    border-radius: 50%;
+    margin-top: 102px;
+}
+
+.main__success-content {
+    font-size: 24px;
+    margin-top: 29px;
+}
+
+.main__success-description {
+    font-size: 14px;
+    color: #898c98;
+    max-width: 349px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.main__code-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 176px;
+    border-bottom: #898c98 1px solid;
+    margin-bottom: 123px;
+}
+
+.main__code-description {
+    font-size: 14px;
+    max-width: 384px;
+    font-weight: 500;
+    line-height: 1.41;
+}
+
+.main__code-title {
+    font-size: 14px;
+    color: #898c98;
+    margin-right: 260px;
+    margin-top: 29px;
+}
+
+.main__code-number {
+    font-size: 18px;
+    margin-right: 8px;
+    margin-top: 7px;
+    box-sizing: border-box;
+    padding-bottom: 11px;
+}
+
+.main__btn-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 202px;
+    padding-right: 202px;
+    margin-top: auto;
+}
+
+@media only screen and (min-height: 840px) {
+    .main-success {     
+        height: calc(100vh - 80px);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main__success-icon {
+        margin-top: 51px;
+    }
+
+    .main__success-content {
+        max-width: 283px;
+        text-align: center;
+        margin-top: 29px;
+    }
+
+    .main__success-description {
+        margin-top: 11px;
+        max-width: 283px;
+    }
+
+    .main__btn-item {
+        position: relative;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        max-width: 404px;
+    }
+
+    .main__code-item {
+        margin-top: 116px;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+    }
+
+    .main__code-description {
+        margin: auto;
+    }
+
+
+    .main__code-title {
+        margin-top: 11px;
+        margin-right: auto;
+    }
+        
+    .main__code-number {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .back {
+       bottom: 43px;;
+       left: 10px;
+       margin: 0;
+       padding: 0;
+    }
+
+    .blue {
+        box-sizing: border-box;
+        margin-left: auto;
+        position: absolute;
+        bottom: 43px;;
+        right: 10px;
+        margin: 0;
+        padding: 0;
+    }
+}
