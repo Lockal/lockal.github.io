@@ -481,3 +481,6 @@ html {
     }
 }
 
+.tippy-backdrop {
+    background-color: #214497;
+}
