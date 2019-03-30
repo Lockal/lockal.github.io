@@ -1152,3 +1152,63 @@ h1 {
 .info:last-child {
     margin-bottom: 286px;
 }
+
+/* INDEX4 */
+
+.history__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #275DAE;
+    margin-top: 49px;
+}
+
+.history__text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    color: #777777;
+    margin-top: 13px;
+}
+
+.history__post {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 35px;
+    letter-spacing: -0.01em;
+    color: #275DAE;
+    margin-top: 38px;
+    -webkit-box-shadow: inset 166px -17px 0px -103px #FFCF24;
+    -moz-box-shadow: inset 166px -17px 0px -103px #FFCF24;
+    box-shadow: inset 166px -17px 0px -103px #FFCF24;
+    padding-left: 16px;
+    margin-bottom: 60px;
+}
+
+.about__all--alt {
+    margin-bottom: 248px;
+}
+
+.history__side {
+    font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 25px;
+text-align: right;
+letter-spacing: -0.01em;
+padding-left: 10%;
+padding-right: 36px;
+color: #275DAE;
+padding-top: 182px;
+padding-bottom: 380px;
+}
