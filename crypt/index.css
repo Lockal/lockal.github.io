@@ -1091,6 +1091,7 @@ h1 {
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: #275DAE;
+    padding-bottom: 14px;
 }
 
 .img__item {
