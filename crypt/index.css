@@ -1187,12 +1187,48 @@ h1 {
     letter-spacing: -0.01em;
     color: #275DAE;
     margin-top: 38px;
-    -webkit-box-shadow: inset 166px -17px 0px -103px #FFCF24;
-    -moz-box-shadow: inset 166px -17px 0px -103px #FFCF24;
-    box-shadow: inset 166px -17px 0px -103px #FFCF24;
     padding-left: 16px;
     margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
 }
+
+.history__first, .history__second {
+    position: relative;
+}
+
+.history__first::after {
+    content: "";
+    width: 32px;
+    background: #FFCF24;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    height: 224px;
+}
+
+.history__second::after {
+    content: "";
+    width: 32px;
+    background: #FFCF24;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    height: 188px;
+}
+
+
+
+.history__post:nth-child(2):after {
+    background: red;
+}
+
+.history {
+    position: relative;
+}
+
 
 .about__all--alt {
     margin-bottom: 248px;
