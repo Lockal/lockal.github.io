@@ -51,15 +51,16 @@
     
             <div class="opportunities flex">
                 <div class="flex__section--left opportunities__nav">
-                    <div class="slider-nav">
-                        <div class="slider-nav__title">Разделы</div>
-                        <div class="slider-nav__list">
-                            <div class="slider-nav__item slider-nav__item--active">Все новости</div>
-                            <div class="slider-nav__item">Криптоюнит</div>
-                            <div class="slider-nav__item">Валюта</div>
-                            <div class="slider-nav__item">Инвестиции</div>
-                            <div class="slider-nav__item">События</div>
-                        </div>
+                    <div class="side__title">Поделиться в соцсетях</div>
+                    <div class="side__soc">
+                        <a class="fb-side" href="#">  
+                        </a>
+                        <a class="vk-side" href="#">                            
+                        </a>
+                        <a class="inst-side" href="#">                            
+                        </a>
+                        <a class="tw-side" href="#">
+                        </a>
                     </div>
                 </div>
                 <div class="flex__section--right opportunities__content">
@@ -70,12 +71,7 @@
                             <li class="micromenu__element">Новости Инвестиций</li>
                         </ul>
                     </div>
-                    <div class="title opportunities__title">
-                        <h3>
-                            <span>последние</span>
-                        </h3>
-                        <h1 class="news">Новости</h1>
-                    </div>
+                    
                     <div class="slider-nav-mobile">
                         <div class="slider-nav-mobile__title">Разделы</div>
                         <div class="slider-nav-mobile__list">
@@ -86,24 +82,43 @@
                             <div class="slider-nav-mobile__item">События</div>
                         </div>
                     </div>
-                    <div class="opportunities__img rectangle">
-                        <img src="./img/Rectangle 9.3.svg" alt="">
-                    <span class="title__margin">When to use groups versus frames in Figma</span>
-                    <span class="title__date">23 марта 2019</span>
-                </div>
-                </div>
-            </div>
-
-    
-            <div class="about flex">
-                <div class="flex__section--left"></div>
-            </div>
-            
-            <div class="news flex">
-                <div class="flex__section--left news__nav">
-                    
-                </div>
-                <div class="flex__section--right news__right">
+                    <div class="opportunities__img">
+                        <img class="vs" src="./img/vs.svg" alt="">
+                    </div>
+                    <div class="title steps__title title--yellow">
+                        <h3><span>Развитие программы</span></h3>
+                    </div>
+                    <span class="title__margin title__margin--alt">When to use groups versus frames in Figma</span>
+                    <div class="about__text about__text--blue about__text--alt">
+                        Do you have trouble knowing when to use a frame or a group in Figma? They are both containers for housing objects, but they have their own unique properties and use cases. It's not always obvious how they differ from each other, so to help distinguish between them I wrote up this primer
+                    </div>
+                    <div class="steps__grid-title">You can create a group by selecting objects</div>
+                    <div class="opportunities__text">
+                        Similar to other design tools, groups in Figma allow you to combine multiple elements together as a single top level layer. A group's bounds are determined by its child elements, so resizing or moving those elements will cause the group's bounds to adjust automatically. You can create a group by selecting objects and pressing: ⌘ + G (Mac) or Ctrl + G (Win).
+                    </div>
+                    <div class="opportunities__img">
+                        <img src="./img/image 2.svg" alt="">
+                    </div>
+                    <div class="desc--grey">If you wish to scale these properties too, use the scale tool</div>
+                    <div class="opportunities__text">
+                        Making a group is non destructive—meaning it won't flatten or permanently combine the layers together. At any point you can ungroup the elements, by pressing: ⌘ + Shift + G (Mac) or Ctrl + Shift G (Win). Groups are really useful when you want to combine similar items together and manage less layers within your design. For example, you may have a selection of company logos that need to stay together. Grouping them is a great way to combine them into one single more manageable layer—clicking on any of the elements within your group will select the entire thing and allow you to you move or manipulate it as a single object on the canvas. If you need to select a particular child element within a group, you can do so by double clicking.
+                    </div>
+                    <div class="yellowline__text">By setting up proper constraints and enabling "clip content" you can build frames and components that reveal more content when they expand. For example, you have a drop down menu that gets used in multiple places with varying numbers of options.</div>
+                    <div class="opportunities__text">
+                        You can also leverage features like Smart Selections inside a group to adjust the spacing between elements. In the example below you can see the group's bounds auto adjust to match the overall dimensions of the child elements when the spacing changes. When you resize a group, its child elements will scale as you would expect vector artwork to scale. However effects, strokes, and type sizes will not scale. If you wish to scale these properties too, use the scale tool (K). If you want to apply constraints to define how elements will be resized, consider using a frame instead. Constraints applied to elements will always be relative to the closest parent frame—not relative to the bounds of the group. More on that as we uncover frames!
+                    </div>
+                    <div class="opportunities__img">
+                        <img src="./img/image 2.1.svg" alt="">
+                    </div>
+                    <div class="desc--grey">You can also leverage features like Smart Selections inside a group</div>
+                    <div class="frame-list">
+                        <div class="frame-list__title">TLDR — use a frame if:</div>
+                        <div class="frame-list__item">You want to control the frame size independently of its contents</div>
+                        <div class="frame-list__item">You want to define the resizing behavior of child elements</div>
+                        <div class="frame-list__item">You want objects to be clipped by frame bounds, or reside outside its bounds</div>
+                        <div class="frame-list__item">You want nested scrolling behavior in your prototype (ex: horizontal carousel, or a map that you can pan vertically and horizontally)</div>
+                    </div>
+                    <div class="frame-list__title frame-list__title--blue">Смотрите так же:</div>
                     <div class="news__list">
                         <div class="news__item">
                             <div class="news__image">
@@ -135,61 +150,21 @@
                                 <div class="news__date">23 марта 2019</div>
                             </div>
                         </div>
-                        <div class="news__item">
-                            <div class="news__image">
-                                <img src="./img/top.jpg" alt="">
-                            </div>
-                            <div class="news__content">
-                                <div class="news__title">Я блаженствую в здешнем краю, словно созданном для меня</div>
-                                <div class="news__text">Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога! Ни одного штриха не мог бы я сделать, а никогда не был таким большим</div>
-                                <div class="news__date">23 марта 2019</div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <div class="news__image">
-                                <img src="./img/top.jpg" alt="">
-                            </div>
-                            <div class="news__content">
-                                <div class="news__title">Я блаженствую в здешнем краю, словно созданном для меня</div>
-                                <div class="news__text">Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога! Ни одного штриха не мог бы я сделать, а никогда не был таким большим</div>
-                                <div class="news__date">23 марта 2019</div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <div class="news__image">
-                                <img src="./img/top.jpg" alt="">
-                            </div>
-                            <div class="news__content">
-                                <div class="news__title">Я блаженствую в здешнем краю, словно созданном для меня</div>
-                                <div class="news__text">Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога! Ни одного штриха не мог бы я сделать, а никогда не был таким большим</div>
-                                <div class="news__date">23 марта 2019</div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <div class="news__image">
-                                <img src="./img/top.jpg" alt="">
-                            </div>
-                            <div class="news__content">
-                                <div class="news__title">Я блаженствую в здешнем краю, словно созданном для меня</div>
-                                <div class="news__text">Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога! Ни одного штриха не мог бы я сделать, а никогда не был таким большим</div>
-                                <div class="news__date">23 марта 2019</div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <div class="news__image">
-                                <img src="./img/top.jpg" alt="">
-                            </div>
-                            <div class="news__content">
-                                <div class="news__title">Я блаженствую в здешнем краю, словно созданном для меня</div>
-                                <div class="news__text">Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога! Ни одного штриха не мог бы я сделать, а никогда не был таким большим</div>
-                                <div class="news__date">23 марта 2019</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
+
+            
+
     
-            <footer class="footer">
+            <div class="about flex">
+                <div class="flex__section--left">
+                    
+                </div>
+            </div>
+            
+    
+            <footer class="footer footer--2">
                 <div class="flex footer__inner">
                     <div class="footer__logo flex__section--left">
                         <a href="#">
