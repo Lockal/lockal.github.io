@@ -1248,3 +1248,21 @@ color: #275DAE;
 padding-top: 182px;
 padding-bottom: 380px;
 }
+
+.micromenu {
+    position: relative;
+}
+
+.micromenu__element {
+    position: relative;
+}
+
+.micromenu__element:not(:nth-child(1))::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 10px;
+    background: url("img/arrow.svg") no-repeat center 1px;
+    top: 2px;
+    left: -16px;
+}
