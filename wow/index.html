@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скачать аддон для WoW</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121214;
+            color: #e1e1e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card {
+            background-color: #1a1a1e;
+            border: 1px solid #29292e;
+            border-radius: 12px;
+            padding: 40px 30px;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .wow-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #f7941d; /* Около-вовский золотой цвет */
+        }
+        p {
+            font-size: 15px;
+            color: #a8a8b3;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .btn-download {
+            display: inline-block;
+            background-color: #f7941d;
+            color: #121214;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 14px 32px;
+            border-radius: 6px;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .btn-download:hover {
+            background-color: #ffaa3b;
+        }
+        .btn-download:active {
+            transform: scale(0.98);
+        }
+        .file-info {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #626269;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="card">
+        <div class="wow-icon">⚔️</div>
+        <h1>Astra UI</h1> 
+        <p>WOTLK default UI replacement</p>
+        <p>Some commands:</p>
+        <p>/astra - frames position</p>
+        <p>/tankmode - green nameplate if mob on you</p>
+        
+        <!-- В href укажите точное имя файла, который лежит рядом -->
+        <a href="my-addon.zip" download class="btn-download">
+            Download
+        </a>
+        
+        <div class="file-info">Ver 1.0.0</div>
+        <div class="file-info">Game Ver 3.3.5</div>
+    </div>
+
+</body>
+</html>
