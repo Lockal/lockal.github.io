@@ -242,14 +242,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     const likeBtn = document.getElementById("likeBtn");
     const likeCount = document.getElementById("likeCount");
-    
-    // Новые параметры для работы с актуальной V2 версией сервиса
     const namespace = "astra_ui_wotlk_addon"; 
     const key = "likes_counter";
 
     let hasLiked = localStorage.getItem("astra_ui_liked") === "true";
 
-    // 1. Запрос на получение текущего количества лайков через v2
     fetch(`https://counterapi.dev{namespace}/${key}`)
         .then(res => {
             if (!res.ok) throw new Error();
@@ -257,13 +254,12 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(data => {
             if (hasLiked) likeBtn.classList.add("liked");
-            likeCount.textContent = data.count; // В v2 вместо .value используется .count
+            likeCount.textContent = data.count; 
         })
         .catch(() => {
             likeCount.textContent = "0"; 
         });
 
-    // 2. Обработка клика по сердечку (up / down)
     likeBtn.addEventListener("click", () => {
         if (!hasLiked) {
             fetch(`https://counterapi.dev{namespace}/${key}/up`)
