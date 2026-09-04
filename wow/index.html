@@ -17,7 +17,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px; 
             background-image: linear-gradient(rgba(18, 18, 20, 0.75), rgba(18, 18, 20, 0.75)), url('background.jpg');
             background-size: cover;
             background-position: center;
@@ -34,10 +34,6 @@
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             margin: auto; 
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
         .wow-icon {
             font-size: 48px;
@@ -52,6 +48,9 @@
             font-size: 15px;
             color: #a8a8b3;
             line-height: 1.5;
+            margin-bottom: 15px; 
+        }
+        .commands {
             margin-bottom: 30px;
         }
         .btn-download {
@@ -76,6 +75,47 @@
             font-size: 12px;
             color: #626269;
         }
+
+        .changelog {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #29292e;
+            text-align: left; 
+        }
+        .changelog h2 {
+            font-size: 16px;
+            color: #f7941d;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .changelog-version {
+            font-size: 14px;
+            color: #e1e1e6;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .changelog-list {
+            list-style: none; 
+            margin-bottom: 15px;
+        }
+        .changelog-list li {
+            font-size: 13px;
+            color: #a8a8b3;
+            line-height: 1.6;
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 15px;
+        }
+        .changelog-list li::before {
+            content: "•";
+            color: #f7941d;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     </style>
 </head>
 <body>
@@ -84,10 +124,12 @@
         <div class="wow-icon">⚔️</div>
         <h1>Astra UI</h1> 
         <p>WOTLK UI replacement</p>
-        <p>Some commands:</p>
-        <p>/astra - frames position</p>
-        <p>/tankmode - green nameplates for tanks</p>
         
+        <div class="commands">
+            <p>Some commands:</p>
+            <p><strong>/astra</strong> - frames position</p>
+            <p><strong>/tankmode</strong> - green nameplates for tanks</p>
+        </div>
         
         <a href="Astra.rar" download class="btn-download">
             Download
@@ -95,6 +137,24 @@
         
         <div class="file-info">Ver 1.0.0</div>
         <div class="file-info">Game Ver 3.3.5</div>
+
+        <!-- fixes block -->
+        <div class="changelog">
+            <h2>Changelog / Багфиксы</h2>
+            
+            <div class="changelog-version">v1.0.0 (Текущая)</div>
+            <ul class="changelog-list">
+                <li>Исправлено отображение фреймов на разрешениях 4К.</li>
+                <li>Добавлен новый режим отображения для танков.</li>
+                <li>Оптимизирована прогрузка аддона при старте игры.</li>
+            </ul>
+
+            <div class="changelog-version">v0.9.9 (Beta)</div>
+            <ul class="changelog-list">
+                <li>Исправлен критический баг с падением FPS во время рейдов.</li>
+                <li>Первый публичный тест интерфейса.</li>
+            </ul>
+        </div>
     </div>
 
 </body>
