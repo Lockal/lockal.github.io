@@ -14,16 +14,18 @@
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             color: #e1e1e6;
             display: flex;
+            flex-direction: column; /* НАДО ДОБАВИТЬ: выстраивает контент вертикально и центрирует */
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 40px 20px; 
+            padding: 40px 20px;
             background-image: linear-gradient(rgba(18, 18, 20, 0.75), rgba(18, 18, 20, 0.75)), url('background.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
+
         .card {
             background-color: #1a1a1e;
             border: 1px solid #29292e;
@@ -33,7 +35,7 @@
             width: 100%;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            margin: auto; 
+            /* margin: auto; больше не нужен, flex-box сам всё выровняет */
         }
         .wow-icon {
             font-size: 48px;
