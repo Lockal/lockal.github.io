@@ -55,8 +55,8 @@
             margin-bottom: 30px;
         }
 .btn-download {
-    display: inline-block; /* Возвращаем блочный тип для стабильного выравнивания */
-    position: relative;    /* Родителю задаем relative, чтобы лапка позиционировалась относительно кнопки */
+    display: inline-block; 
+    position: relative;   
     background-color: #f7941d;
     color: #121214;
     text-decoration: none;
@@ -139,6 +139,20 @@
             left: 0;
             top: 0;
         }
+        .credits-text {
+            position: fixed;       
+            bottom: 15px;          
+            right: 20px;           
+            font-size: 11px;       
+            color: rgba(255, 255, 255, 0.4); 
+            font-family: inherit;
+            pointer-events: none;  
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+        body:hover .credits-text {
+            color: rgba(255, 255, 255, 0.7);
+        }
     </style>
 </head>
 <body>
@@ -176,6 +190,6 @@
             </ul>
         </div>
     </div>
-
+<div class="credits-text">Most of original textures and art author: Folji</div>
 </body>
 </html>
