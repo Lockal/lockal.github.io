@@ -55,7 +55,9 @@
             margin-bottom: 30px;
         }
         .btn-download {
-            display: inline-block;
+            display: inline-flex; 
+            align-items: center;  
+            gap: 10px;           
             background-color: #f7941d;
             color: #121214;
             text-decoration: none;
@@ -70,6 +72,12 @@
         }
         .btn-download:active {
             transform: scale(0.98);
+        }
+
+        .btn-download svg {
+            width: 20px;
+            height: 20px;
+            fill: #ffffff;    
         }
         .file-info {
             margin-top: 15px;
@@ -146,7 +154,7 @@
             <div class="changelog-version">v1.0.1</div>
             <ul class="changelog-list">
                 <li>Fixed pet actionbar disappearing in combat.</li>
-                <li>Fixed dubuff size on nameplates.</li>
+                <li>Fixed debuffs size on nameplates.</li>
                 <li>Fixed next melee swing skills glow on action bars (Heroic Strike, Maul etc).</li>
                 <li>Fixed incoming damage/heal text. Added text for misses/dodges/parryes</li>
             </ul>
