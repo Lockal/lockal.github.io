@@ -25,7 +25,6 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
-
         .card {
             background-color: #1a1a1e;
             border: 1px solid #29292e;
@@ -54,51 +53,91 @@
         .commands {
             margin-bottom: 30px;
         }
-.btn-download {
-    display: inline-block; 
-    position: relative;   
-    background-color: #f7941d;
-    color: #121214;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 14px 32px;
-    border-radius: 6px;
-    transition: background-color 0.2s, transform 0.1s;
-    min-width: 180px;      
-    text-align: center;
-}
-
-.btn-download svg {
-    position: absolute;
-    left: 18px;            
-    top: 50%;
-    transform: translateY(-50%) rotate(-15deg); 
-    width: 20px;
-    height: 20px;
-    fill: #ffffff;         
-    transition: transform 0.2s ease-in-out; 
-}
-
-.btn-download:hover {
-    background-color: #ffaa3b;
-}
-
-
-.btn-download:hover svg {
-    transform: translateY(-50%) rotate(-25deg) scale(1.1); 
-}
-
-.btn-download:active {
-    transform: scale(0.98);
-}
-
+        .btn-download {
+            display: inline-block; 
+            position: relative;   
+            background-color: #f7941d;
+            color: #121214;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 14px 32px;
+            border-radius: 6px;
+            transition: background-color 0.2s, transform 0.1s;
+            min-width: 180px;      
+            text-align: center;
+        }
+        .btn-download svg {
+            position: absolute;
+            left: 18px;            
+            top: 50%;
+            transform: translateY(-50%) rotate(-15deg); 
+            width: 20px;
+            height: 20px;
+            fill: #ffffff;         
+            transition: transform 0.2s ease-in-out; 
+        }
+        .btn-download:hover {
+            background-color: #ffaa3b;
+        }
+        .btn-download:hover svg {
+            transform: translateY(-50%) rotate(-25deg) scale(1.1); 
+        }
+        .btn-download:active {
+            transform: scale(0.98);
+        }
+        .like-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .btn-like {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+        }
+        .btn-like:hover {
+            transform: scale(1.15);
+        }
+        .btn-like:active {
+            transform: scale(0.95);
+        }
+        .heart-icon {
+            width: 28px;
+            height: 28px;
+            fill: none;
+            stroke: #a8a8b3;
+            stroke-width: 2;
+            transition: fill 0.2s ease, stroke 0.2s ease;
+        }
+        .btn-like.liked .heart-icon {
+            fill: #e0245e;
+            stroke: #e0245e;
+        }
+        .like-count {
+            font-size: 16px;
+            font-weight: bold;
+            color: #a8a8b3;
+            min-width: 30px;
+            text-align: left;
+            user-select: none;
+        }
+        .btn-like.liked + .like-count {
+            color: #e0245e;
+        }
         .file-info {
             margin-top: 15px;
             font-size: 12px;
             color: #626269;
         }
-
         .changelog {
             margin-top: 35px;
             padding-top: 25px;
@@ -173,14 +212,21 @@
             </svg>
             Download
         </a>
+
+        <div class="like-container">
+            <button class="btn-like" id="likeBtn">
+                <svg class="heart-icon" viewBox="0 0 24 24" xmlns="http://w3.org">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </button>
+            <span class="like-count" id="likeCount">0</span>
+        </div>
         
         <div class="file-info">Ver 1.0.1</div>
         <div class="file-info">Game Ver 3.3.5</div>
 
-        <!-- fixes block -->
         <div class="changelog">
             <h2>Changelog</h2>
-            
             <div class="changelog-version">v1.0.1</div>
             <ul class="changelog-list">
                 <li>Fixed pet actionbar disappearing in combat.</li>
@@ -190,7 +236,8 @@
             </ul>
         </div>
     </div>
-<div class="credits-text">Most of original textures and art author: Folji</div>
+    <div class="credits-text">Most of original textures and art author: Folji</div>
+
     <script>
     document.addEventListener("DOMContentLoaded", () => {
         const likeBtn = document.getElementById("likeBtn");
@@ -210,7 +257,7 @@
                 likeCount.textContent = data.value;
             })
             .catch(() => {
-                likeCount.textContent = "142"; 
+                likeCount.textContent = "0"; 
             });
 
         likeBtn.addEventListener("click", () => {
@@ -235,7 +282,6 @@
             }
         });
     });
-</script>
-
+    </script>
 </body>
 </html>
