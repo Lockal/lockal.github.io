@@ -86,81 +86,7 @@
         .btn-download:active {
             transform: scale(0.98);
         }
-        .like-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            height: 35px;
-        }
-
-.github-star-badge {
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    z-index: 1000;
-    text-decoration: none;
-    transition: transform 0.2s, opacity 0.2s;
-}
-
-.github-star-badge:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-}
-
-.github-star-badge img {
-    display: block;
-    height: 28px;
-    border-radius: 4px;
-}
-
-@media (max-width: 600px) {
-    .github-star-badge {
-        position: static;
-        margin-bottom: 25px;
-        display: inline-block;
-    }
-}
-        .btn-like {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s ease;
-        }
-        .btn-like:hover {
-            transform: scale(1.15);
-        }
-        .btn-like:active {
-            transform: scale(0.95);
-        }
-        .heart-icon {
-            width: 28px;
-            height: 28px;
-            fill: none;
-            stroke: #a8a8b3;
-            stroke-width: 2;
-            transition: fill 0.2s ease, stroke 0.2s ease;
-        }
-        .btn-like.liked .heart-icon {
-            fill: #e0245e;
-            stroke: #e0245e;
-        }
-        .like-count {
-            font-size: 16px;
-            font-weight: bold;
-            color: #a8a8b3;
-            min-width: 30px;
-            text-align: left;
-            user-select: none;
-        }
-        .btn-like.liked + .like-count {
-            color: #e0245e;
-        }
+ 
         .file-info {
             margin-top: 15px;
             font-size: 12px;
@@ -223,9 +149,6 @@
     </style>
 </head>
 <body>
-    <a href="https://github.com" target="_blank" class="github-star-badge">
-        <img src="https://shields.io" alt="GitHub Stars">
-    </a>
     <div class="card">
         <div class="wow-icon">⚔️</div>
         <h1>Astra UI</h1> 
