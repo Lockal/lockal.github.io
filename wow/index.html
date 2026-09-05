@@ -238,39 +238,53 @@
     </div>
     <div class="credits-text">Most of original textures and art author: Folji</div>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const likeBtn = document.getElementById("likeBtn");
-        const likeCount = document.getElementById("likeCount");
-        const localKey = "astra_ui_liked_state";
-        const totalKey = "astra_ui_total_clicks";
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const likeBtn = document.getElementById("likeBtn");
+    const likeCount = document.getElementById("likeCount");
+    
+    const workspace = "Astru_UI"; 
+    const key = "first-counter-5384";
 
-        let hasLiked = localStorage.getItem(localKey) === "true";
-        let totalLikes = parseInt(localStorage.getItem(totalKey) || "0", 10);
+    let hasLiked = localStorage.getItem("astra_ui_liked") === "true";
 
-        if (hasLiked) {
-            likeBtn.classList.add("liked");
-        }
-
-        likeCount.textContent = totalLikes;
-
-        likeBtn.addEventListener("click", () => {
-            hasLiked = !hasLiked;
-            localStorage.setItem(localKey, hasLiked);
-
-            if (hasLiked) {
-                likeBtn.classList.add("liked");
-                totalLikes += 1;
-            } else {
-                likeBtn.classList.remove("liked");
-                totalLikes = Math.max(0, totalLikes - 1);
-            }
-
-            localStorage.setItem(totalKey, totalLikes);
-            likeCount.textContent = totalLikes;
+    fetch(`https://counterapi.dev{workspace}/${key}`)
+        .then(res => {
+            if (!res.ok) throw new Error();
+            return res.json();
+        })
+        .then(data => {
+            if (hasLiked) likeBtn.classList.add("liked");
+            likeCount.textContent = data.count;
+        })
+        .catch(() => {
+            likeCount.textContent = "0"; 
         });
+
+    likeBtn.addEventListener("click", () => {
+        const action = !hasLiked ? "up" : "down";
+        
+        fetch(`https://counterapi.dev{workspace}/${key}/${action}`)
+            .then(res => {
+                if (!res.ok) throw new Error();
+                return res.json();
+            })
+            .then(data => {
+                hasLiked = !hasLiked;
+                localStorage.setItem("astra_ui_liked", hasLiked);
+                
+                if (hasLiked) {
+                    likeBtn.classList.add("liked");
+                } else {
+                    likeBtn.classList.remove("liked");
+                }
+                likeCount.textContent = data.count;
+            })
+            .catch(err => console.error("API Error:", err));
     });
-    </script>
+});
+</script>
+
 </body>
 </html>
 
