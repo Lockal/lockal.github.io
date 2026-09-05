@@ -238,54 +238,39 @@
     </div>
     <div class="credits-text">Most of original textures and art author: Folji</div>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const likeBtn = document.getElementById("likeBtn");
-    const likeCount = document.getElementById("likeCount");
-    
-    const workspace = "Astru_UI"; 
-    const key = "likes";
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const likeBtn = document.getElementById("likeBtn");
+        const likeCount = document.getElementById("likeCount");
+        const localKey = "astra_ui_liked_state";
+        const totalKey = "astra_ui_total_clicks";
 
-    let hasLiked = localStorage.getItem("astra_ui_liked") === "true";
+        let hasLiked = localStorage.getItem(localKey) === "true";
+        let totalLikes = parseInt(localStorage.getItem(totalKey) || "0", 10);
 
-    fetch(`https://counterapi.dev{workspace}/${key}`)
-        .then(res => {
-            if (!res.ok) throw new Error();
-            return res.json();
-        })
-        .then(data => {
-            if (hasLiked) likeBtn.classList.add("liked");
-            likeCount.textContent = data.value; 
-        })
-        .catch(() => {
-            likeCount.textContent = "0"; 
-        });
-
-    likeBtn.addEventListener("click", () => {
-        if (!hasLiked) {
-            fetch(`https://counterapi.dev{workspace}/${key}/up`) 
-                .then(res => res.json())
-                .then(data => {
-                    hasLiked = true;
-                    localStorage.setItem("astra_ui_liked", "true");
-                    likeBtn.classList.add("liked");
-                    likeCount.textContent = data.value;
-                });
-        } else {
-            fetch(`https://counterapi.dev{workspace}/${key}/down`) 
-                .then(res => res.json())
-                .then(data => {
-                    hasLiked = false;
-                    localStorage.setItem("astra_ui_liked", "false");
-                    likeBtn.classList.remove("liked");
-                    likeCount.textContent = data.value;
-                });
+        if (hasLiked) {
+            likeBtn.classList.add("liked");
         }
+
+        likeCount.textContent = totalLikes;
+
+        likeBtn.addEventListener("click", () => {
+            hasLiked = !hasLiked;
+            localStorage.setItem(localKey, hasLiked);
+
+            if (hasLiked) {
+                likeBtn.classList.add("liked");
+                totalLikes += 1;
+            } else {
+                likeBtn.classList.remove("liked");
+                totalLikes = Math.max(0, totalLikes - 1);
+            }
+
+            localStorage.setItem(totalKey, totalLikes);
+            likeCount.textContent = totalLikes;
+        });
     });
-});
-</script>
-
-
-
+    </script>
 </body>
 </html>
+
