@@ -243,47 +243,40 @@ document.addEventListener("DOMContentLoaded", () => {
     const likeBtn = document.getElementById("likeBtn");
     const likeCount = document.getElementById("likeCount");
     
-    const workspace = "mercurys-team-5384"; 
-    const key = "first-counter-5384";
+    const key = "astra_ui_wotlk_addon_official_likes";
 
     let hasLiked = localStorage.getItem("astra_ui_liked") === "true";
 
-    // 1. Получаем точное значение из вашей панели
-    fetch(`https://counterapi.dev{workspace}/${key}`)
+    fetch(`https://moondb.xyz{key}`)
         .then(res => res.json())
         .then(data => {
             if (hasLiked) likeBtn.classList.add("liked");
-            // Проверяем оба варианта ответа сервера для надежности
-            likeCount.textContent = data.count !== undefined ? data.count : (data.value !== undefined ? data.value : "0");
+            likeCount.textContent = data.count || 0;
         })
         .catch(() => {
             likeCount.textContent = "0"; 
         });
 
-    // 2. Отправляем клик через POST, как требует спецификация V2
     likeBtn.addEventListener("click", () => {
         const action = !hasLiked ? "up" : "down";
         
-        fetch(`https://counterapi.dev{workspace}/${key}/${action}`, {
-            method: "POST"
-        })
-        .then(res => res.json())
-        .then(data => {
-            hasLiked = !hasLiked;
-            localStorage.setItem("astra_ui_liked", hasLiked);
-            
-            if (hasLiked) {
-                likeBtn.classList.add("liked");
-            } else {
-                likeBtn.classList.remove("liked");
-            }
-            likeCount.textContent = data.count !== undefined ? data.count : data.value;
-        })
-        .catch(err => console.error("API Error:", err));
+        fetch(`https://moondb.xyz{key}/${action}`, { method: "POST" })
+            .then(res => res.json())
+            .then(data => {
+                hasLiked = !hasLiked;
+                localStorage.setItem("astra_ui_liked", hasLiked);
+                
+                if (hasLiked) {
+                    likeBtn.classList.add("liked");
+                } else {
+                    likeBtn.classList.remove("liked");
+                }
+                likeCount.textContent = data.count;
+            })
+            .catch(err => console.error("Error:", err));
     });
 });
 </script>
-
 
 
 </body>
