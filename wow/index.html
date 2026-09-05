@@ -95,35 +95,33 @@
             height: 35px;
         }
 
-        .github-star-badge {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background-color: rgba(26, 26, 30, 0.6);
-            padding: 8px 12px 4px 12px;
-            border-radius: 8px;
-            border: 1px solid rgba(41, 41, 46, 0.5);
-            backdrop-filter: blur(4px);
-            transition: opacity 0.2s, background-color 0.2s;
-        }
-
-        .github-star-badge:hover {
-            background-color: rgba(26, 26, 30, 0.9);
-            border-color: #29292e;
-        }
-
-
-        @media (max-width: 600px) {
-        .github-star-badge {
-            position: static;
-            margin-bottom: 20px;
-            background-color: #1a1a1e;
-            border: 1px solid #29292e;
-        }
+.github-star-badge {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1000;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
+.github-star-badge:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
 
+.github-star-badge img {
+    display: block;
+    height: 28px;
+    border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+    .github-star-badge {
+        position: static;
+        margin-bottom: 25px;
+        display: inline-block;
+    }
+}
         .btn-like {
             background: none;
             border: none;
@@ -225,9 +223,9 @@
     </style>
 </head>
 <body>
-    <div class="github-star-badge">
-        <iframe src="https://ghbtns.com" frameborder="1" scrolling="0" width="270" height="60" title="GitHub Stars"></iframe>
-    </div>
+    <a href="https://github.com" target="_blank" class="github-star-badge">
+        <img src="https://shields.io" alt="GitHub Stars">
+    </a>
     <div class="card">
         <div class="wow-icon">⚔️</div>
         <h1>Astra UI</h1> 
