@@ -90,9 +90,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            height: 35px;
         }
         .btn-like {
             background: none;
@@ -214,13 +214,9 @@
         </a>
 
         <div class="like-container">
-            <button class="btn-like" id="likeBtn">
-                <svg class="heart-icon" viewBox="0 0 24 24" xmlns="http://w3.org">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                </svg>
-            </button>
-            <span class="like-count" id="likeCount">0</span>
+    <iframe src="https://getloli.com" style="border:none; width:120px; height:30px; overflow:hidden;" scrolling="no" frameborder="0"></iframe>
         </div>
+
         
         <div class="file-info">Ver 1.0.1</div>
         <div class="file-info">Game Ver 3.3.5</div>
@@ -237,46 +233,6 @@
         </div>
     </div>
     <div class="credits-text">Most of original textures and art author: Folji</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const likeBtn = document.getElementById("likeBtn");
-    const likeCount = document.getElementById("likeCount");
-    
-    const key = "astra_ui_wotlk_addon_official_likes";
-
-    let hasLiked = localStorage.getItem("astra_ui_liked") === "true";
-
-    fetch(`https://moondb.xyz{key}`)
-        .then(res => res.json())
-        .then(data => {
-            if (hasLiked) likeBtn.classList.add("liked");
-            likeCount.textContent = data.count || 0;
-        })
-        .catch(() => {
-            likeCount.textContent = "0"; 
-        });
-
-    likeBtn.addEventListener("click", () => {
-        const action = !hasLiked ? "up" : "down";
-        
-        fetch(`https://moondb.xyz{key}/${action}`, { method: "POST" })
-            .then(res => res.json())
-            .then(data => {
-                hasLiked = !hasLiked;
-                localStorage.setItem("astra_ui_liked", hasLiked);
-                
-                if (hasLiked) {
-                    likeBtn.classList.add("liked");
-                } else {
-                    likeBtn.classList.remove("liked");
-                }
-                likeCount.textContent = data.count;
-            })
-            .catch(err => console.error("Error:", err));
-    });
-});
-</script>
 
 
 </body>
