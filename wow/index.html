@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(data => {
             if (hasLiked) likeBtn.classList.add("liked");
-            likeCount.textContent = data.count;
+            likeCount.textContent = data.value; 
         })
         .catch(() => {
             likeCount.textContent = "0"; 
@@ -263,27 +263,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     likeBtn.addEventListener("click", () => {
         if (!hasLiked) {
-            fetch(`https://counterapi.dev{workspace}/${key}/up`)
+            fetch(`https://counterapi.dev{workspace}/${key}/up`) 
                 .then(res => res.json())
                 .then(data => {
                     hasLiked = true;
                     localStorage.setItem("astra_ui_liked", "true");
                     likeBtn.classList.add("liked");
-                    likeCount.textContent = data.count;
+                    likeCount.textContent = data.value;
                 });
         } else {
-            fetch(`https://counterapi.dev{workspace}/${key}/down`)
+            fetch(`https://counterapi.dev{workspace}/${key}/down`) 
                 .then(res => res.json())
                 .then(data => {
                     hasLiked = false;
                     localStorage.setItem("astra_ui_liked", "false");
                     likeBtn.classList.remove("liked");
-                    likeCount.textContent = data.count;
+                    likeCount.textContent = data.value;
                 });
         }
     });
 });
 </script>
+
 
 
 </body>
