@@ -242,19 +242,20 @@
 document.addEventListener("DOMContentLoaded", () => {
     const likeBtn = document.getElementById("likeBtn");
     const likeCount = document.getElementById("likeCount");
-    const namespace = "astra_ui_wotlk_addon"; 
-    const key = "likes_counter";
+    
+    const workspace = "Astru_UI"; 
+    const key = "likes";
 
     let hasLiked = localStorage.getItem("astra_ui_liked") === "true";
 
-    fetch(`https://counterapi.dev{namespace}/${key}`)
+    fetch(`https://counterapi.dev{workspace}/${key}`)
         .then(res => {
             if (!res.ok) throw new Error();
             return res.json();
         })
         .then(data => {
             if (hasLiked) likeBtn.classList.add("liked");
-            likeCount.textContent = data.count; 
+            likeCount.textContent = data.count;
         })
         .catch(() => {
             likeCount.textContent = "0"; 
@@ -262,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     likeBtn.addEventListener("click", () => {
         if (!hasLiked) {
-            fetch(`https://counterapi.dev{namespace}/${key}/up`)
+            fetch(`https://counterapi.dev{workspace}/${key}/up`)
                 .then(res => res.json())
                 .then(data => {
                     hasLiked = true;
@@ -271,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     likeCount.textContent = data.count;
                 });
         } else {
-            fetch(`https://counterapi.dev{namespace}/${key}/down`)
+            fetch(`https://counterapi.dev{workspace}/${key}/down`)
                 .then(res => res.json())
                 .then(data => {
                     hasLiked = false;
@@ -283,6 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 </script>
+
 
 </body>
 </html>
