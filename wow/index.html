@@ -243,19 +243,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const likeBtn = document.getElementById("likeBtn");
     const likeCount = document.getElementById("likeCount");
     
-    const workspace = "Astru_UI"; 
-    const key = "first-counter-5384";
+    const key = "astra_ui_wotlk_addon_official_likes";
 
     let hasLiked = localStorage.getItem("astra_ui_liked") === "true";
 
-    fetch(`https://counterapi.dev{workspace}/${key}`)
-        .then(res => {
-            if (!res.ok) throw new Error();
-            return res.json();
-        })
+    fetch(`https://moondb.xyz{key}`)
+        .then(res => res.json())
         .then(data => {
             if (hasLiked) likeBtn.classList.add("liked");
-            likeCount.textContent = data.count;
+            likeCount.textContent = data.count || 0;
         })
         .catch(() => {
             likeCount.textContent = "0"; 
@@ -264,11 +260,8 @@ document.addEventListener("DOMContentLoaded", () => {
     likeBtn.addEventListener("click", () => {
         const action = !hasLiked ? "up" : "down";
         
-        fetch(`https://counterapi.dev{workspace}/${key}/${action}`)
-            .then(res => {
-                if (!res.ok) throw new Error();
-                return res.json();
-            })
+        fetch(`https://moondb.xyz{key}/${action}`, { method: "POST" })
+            .then(res => res.json())
             .then(data => {
                 hasLiked = !hasLiked;
                 localStorage.setItem("astra_ui_liked", hasLiked);
@@ -280,10 +273,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 likeCount.textContent = data.count;
             })
-            .catch(err => console.error("API Error:", err));
+            .catch(err => console.error("Error:", err));
     });
 });
 </script>
+
 
 </body>
 </html>
